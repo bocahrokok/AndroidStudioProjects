@@ -92,7 +92,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       sender: messageSender,
                       text: messageText,
                     );
-                    
+
                     messageBubbles.add(messageBubble);
                   }
                   return Expanded(
@@ -149,12 +149,19 @@ class MessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.lightBlueAccent,
-      child: Text(
-        '$text from $sender',
-        style: TextStyle(
-          fontSize: 20.0,
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Material(
+        color: Colors.lightBlueAccent,
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+          child: Text(
+            '$text from $sender',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 15.0,
+            ),
+          ),
         ),
       ),
     );
