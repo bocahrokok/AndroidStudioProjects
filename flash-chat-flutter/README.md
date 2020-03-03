@@ -1,4 +1,0 @@
-
-
-
-# Stranger Chat ⚡️
